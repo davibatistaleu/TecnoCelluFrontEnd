@@ -1,0 +1,10 @@
+.btn-genrico-cor-1 {
+  font-family: 'rubik-bold';
+  font-size: 1.5em;
+  color: var(--cor-15);
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--cor-1);
+  border-radius: 10px;
+  padding: 15px 30px;
+}
