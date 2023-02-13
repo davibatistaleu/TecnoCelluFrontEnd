@@ -4,3 +4,115 @@
 @import url(utilitarios/componentes.css);
 @import url(utilitarios/responsivo.css);
 
+#header{
+    background-color: var(--cor-1);
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    box-shadow:inset 0px -105px 0px var(--cor-2);
+}
+#header *{
+    z-index: 1;
+}
+#header #triangulo-direito{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 550px;
+}
+#header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+#logo{
+    display: inline-block;
+}
+#logo span{
+    color: var(--cor-primaria);
+}
+#header-nav ul{
+    display: flex;
+    gap:5px;
+}
+#header-nav ul li{
+    display: inline-block;
+}
+#header-nav #menu-principal li a{
+    margin: 0 10px;
+}
+#menu-login a{
+    margin: 0 15px;
+    font-weight: 700;
+}
+#grid-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap:50px;
+    justify-items: center;
+    align-items: center;
+}
+#grid-header #textos{
+    flex-wrap: wrap;
+}
+#grid-header #textos h1{
+    width: 50ch;
+    display: inline;
+    position: relative;
+}
+#grid-header #textos h1::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 50px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: var(--cor-primaria);
+    display: block;
+}
+#grid-header #textos p{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+}
+
+#header #painel{
+    display: block;
+    margin-top: 50px;
+    padding: 20px 50px;
+    background-color: var(--cor-3);
+}
+#header #painel ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#header #painel ul li{
+    text-align: left;
+    border-bottom: 2px solid var(--cor-6);
+    padding: 12px 0px;
+}
+#header #painel ul li img{
+    margin: 0 10px;
+}
+#header #painel ul li:nth-child(odd){
+    text-align: right;
+    border-right: 2px solid var(--cor-6);
+}
+#header #painel ul li:nth-child(7){
+    text-align: right;
+    border-bottom:none;
+}
+#header #painel ul li:last-child{
+    border-bottom:none;
+}

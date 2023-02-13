@@ -33,9 +33,16 @@
     font-style: normal;
     font-weight: 700;
     font-size: 3em;
-    line-height: 3.6875em;
+    line-height: 1.4;
 }
-
+.font-1-lm {
+    color: var(--cor-15);
+    font-family: 'montserrat-bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.75em;
+    line-height: 1.3;
+}
 .font-1-l {
     color: var(--cor-15);
     font-family: 'montserrat-bold';
@@ -168,7 +175,7 @@
 
 @media screen and (min-width:768px) and (max-width: 1580px) {
     .font{
-        font-size: 100%;
+        
     }
     
 }

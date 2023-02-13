@@ -1,10 +1,43 @@
+/* CONTAINERS */
+.container-1200{
+  display: inline-block;
+  max-width: 1200px;
+  width: 100%;
+  margin:0 auto
+}
+.container-1300{
+  display: inline-block;
+  max-width: 1300px;
+  width: 100%;
+  margin:0 auto
+}
+.container-1400{
+  display: inline-block;
+  max-width: 1400px;
+  width: 100%;
+  margin:0 auto
+}
+
+/* BOTÕES */
+
 .btn-genrico-cor-1 {
   font-family: 'rubik-bold';
-  font-size: 1.5em;
+  font-size: 1.125em;
   color: var(--cor-15);
   text-transform: uppercase;
   text-align: center;
   background: var(--cor-1);
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+.btn-genrico-cor-primaria {
+  font-family: 'rubik-bold';
+  font-size: 1.125em;
+  color: var(--cor-15);
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--cor-primaria);
+  border-radius: 5px;
   padding: 15px 30px;
 }
