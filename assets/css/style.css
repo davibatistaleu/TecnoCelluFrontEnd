@@ -4,115 +4,124 @@
 @import url(utilitarios/componentes.css);
 @import url(utilitarios/responsivo.css);
 
-#header{
-    background-color: var(--cor-1);
-    width: 100%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    box-shadow:inset 0px -105px 0px var(--cor-2);
+@import url(partes/header.css);
+
+#orcamento{
+    background-color: var(--cor-2);
+    padding: 50px 0px ;
 }
-#header *{
-    z-index: 1;
-}
-#header #triangulo-direito{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    width: 550px;
-}
-#header-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-}
-#logo{
-    display: inline-block;
-}
-#logo span{
-    color: var(--cor-primaria);
-}
-#header-nav ul{
-    display: flex;
-    gap:5px;
-}
-#header-nav ul li{
-    display: inline-block;
-}
-#header-nav #menu-principal li a{
-    margin: 0 10px;
-}
-#menu-login a{
-    margin: 0 15px;
-    font-weight: 700;
-}
-#grid-header{
+#orcamento #grid-orcamento{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap:50px;
+    gap: 20px;
+}
+#grid-orcamento #sintomas{
+
+}
+#sintomas{
+    background-color: var(--cor-3);
+    width: min-content;
+    border-radius: 20px;
+    padding: 20px;
+}
+#sintomas span{
+    display: block;
+    width: 74px;
+    height: 74px;
+    background-color: var(--cor-1);
+    border-radius: 74px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+#sintomas .canvas-bg #decoração-bolinhas{
+    justify-self: self-end;
+    padding: 15px
+}
+.canvas-bg{
+    display: grid;
+    background-color: var(--cor-1);
+    padding: 16px;
+    border-radius: 20px;
+}
+.canvas-bg #grid-sintomas + p{
+    margin: 20px auto;
+}
+.canvas-bg #grid-sintomas + p::after{
+    content: '';
+    width: 200px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--cor-primaria);
+    display: block;
+    margin: 5px auto;
+}
+#sintomas #grid-sintomas{
+    display: grid;
+    width: min-content;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+#sintomas #grid-sintomas a{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#sintomas #grid-sintomas a li{
+    display: flex;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-2);
+}
+#sintomas #grid-sintomas a li img{
+    max-width: 72px;
+    max-height: 70px;
+}
+
+
+#orcamento #flex-btns{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+#andamento{
+    display: flex;
+    justify-content: center;
+    width: min-content;
+    background-color: var(--cor-3);
+    border-radius: 20px;
+    padding: 20px;
+}
+#andamento .canvas-bg{
+    height: min-content;
+    padding: 85px 0;
+    width: max-content;
+    display: grid;
     justify-items: center;
     align-items: center;
 }
-#grid-header #textos{
-    flex-wrap: wrap;
+#andamento .canvas-bg img{
+    max-width: 280px;
+    width: 100%;
 }
-#grid-header #textos h1{
-    width: 50ch;
-    display: inline;
-    position: relative;
+#andamento .canvas-bg p{
+    max-width: 25ch;
 }
-#grid-header #textos h1::before{
+#andamento .canvas-bg p::after{
     content: '';
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    height: 50px;
-    width: 5px;
-    border-radius: 5px;
-    background-color: var(--cor-primaria);
     display: block;
-}
-#grid-header #textos p{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-    flex-wrap: nowrap;
-}
-
-#header #painel{
-    display: block;
-    margin-top: 50px;
-    padding: 20px 50px;
-    background-color: var(--cor-3);
-}
-#header #painel ul{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-#header #painel ul li{
-    text-align: left;
-    border-bottom: 2px solid var(--cor-6);
-    padding: 12px 0px;
-}
-#header #painel ul li img{
-    margin: 0 10px;
-}
-#header #painel ul li:nth-child(odd){
-    text-align: right;
-    border-right: 2px solid var(--cor-6);
-}
-#header #painel ul li:nth-child(7){
-    text-align: right;
-    border-bottom:none;
-}
-#header #painel ul li:last-child{
-    border-bottom:none;
+    width: 300px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--cor-primaria) ;
+    margin: 10px auto;
 }
