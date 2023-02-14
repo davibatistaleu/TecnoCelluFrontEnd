@@ -6,122 +6,118 @@
 
 @import url(partes/header.css);
 
-#orcamento{
-    background-color: var(--cor-2);
-    padding: 50px 0px ;
+#orcamento {
+  background-color: var(--cor-2);
+  padding: 80px 0px;
 }
-#orcamento #grid-orcamento{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
+#orcamento #grid-orcamento {
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 1fr;
+  justify-content: space-evenly;
 }
-#grid-orcamento #sintomas{
-
+#sintomas {
+  background-color: var(--cor-3);
+  width: min-content;
+  border-radius: 20px;
+  padding: 20px;
 }
-#sintomas{
-    background-color: var(--cor-3);
-    width: min-content;
-    border-radius: 20px;
-    padding: 20px;
+#decoração-bolinhas {
+  justify-self: self-end;
+  padding: 15px;
 }
-#sintomas span{
-    display: block;
-    width: 74px;
-    height: 74px;
-    background-color: var(--cor-1);
-    border-radius: 74px;
-    margin: 0 auto;
-    margin-top: 15px;
-}
-#sintomas .canvas-bg #decoração-bolinhas{
-    justify-self: self-end;
-    padding: 15px
-}
-.canvas-bg{
-    display: grid;
-    background-color: var(--cor-1);
-    padding: 16px;
-    border-radius: 20px;
-}
-.canvas-bg #grid-sintomas + p{
-    margin: 20px auto;
-}
-.canvas-bg #grid-sintomas + p::after{
-    content: '';
-    width: 200px;
-    height: 3px;
-    border-radius: 3px;
-    background-color: var(--cor-primaria);
-    display: block;
-    margin: 5px auto;
-}
-#sintomas #grid-sintomas{
-    display: grid;
-    width: min-content;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-#sintomas #grid-sintomas a{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-#sintomas #grid-sintomas a li{
-    display: flex;
-    width: 130px;
-    height: 130px;
-    border-radius: 10px;
-    gap: 10px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--cor-2);
-}
-#sintomas #grid-sintomas a li img{
-    max-width: 72px;
-    max-height: 70px;
+#sintomas span {
+  display: block;
+  width: 74px;
+  height: 74px;
+  background-color: var(--cor-1);
+  border-radius: 74px;
+  margin: 15px auto 0 auto;
 }
 
-
-#orcamento #flex-btns{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 5px;
+.canvas-bg {
+  display: grid;
+  background-color: var(--cor-1);
+  padding: 16px;
+  border-radius: 20px;
+}
+#grid-sintomas + p {
+  margin: 20px auto;
+}
+#grid-sintomas + p::after {
+  content: "";
+  width: 200px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--cor-primaria);
+  display: block;
+  margin: 5px auto;
+}
+#grid-sintomas {
+  display: grid;
+  width: min-content;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+#grid-sintomas a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#grid-sintomas a li {
+  display: flex;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-2);
+}
+#grid-sintomas a li img {
+  max-width: 72px;
+  max-height: 70px;
 }
 
-
-#andamento{
-    display: flex;
-    justify-content: center;
-    width: min-content;
-    background-color: var(--cor-3);
-    border-radius: 20px;
-    padding: 20px;
+#andamento {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--cor-3);
+  max-width: 460px;
+  width: max-content;
 }
-#andamento .canvas-bg{
-    height: min-content;
-    padding: 85px 0;
-    width: max-content;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-#andamento .canvas-bg img{
-    max-width: 280px;
-    width: 100%;
-}
-#andamento .canvas-bg p{
-    max-width: 25ch;
+#andamento .canvas-bg {
+  display: grid;
+  grid-template-rows: max-content min-content;
+  justify-items: center;
 }
 #andamento .canvas-bg p::after{
     content: '';
     display: block;
-    width: 300px;
     height: 3px;
+    width: 250px;
     border-radius: 3px;
-    background-color: var(--cor-primaria) ;
-    margin: 10px auto;
+    margin: 0 auto;
+    background-color: var(--cor-primaria);
+  }
+#container-img-andamento {
+  padding: 75px 0;
+}
+#andamento span{
+  display: block;
+  width: 74px;
+  height: 74px;
+  background-color: var(--cor-1);
+  border-radius: 74px;
+  margin: 15px auto 0 auto;
+}
+
+#orcamento #flex-btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
 }
