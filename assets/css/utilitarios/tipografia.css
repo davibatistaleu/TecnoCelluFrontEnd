@@ -15,17 +15,6 @@
     font-family: 'rubik-bold';
     src: url(../../fontes/Rubik/static/Rubik-Bold.ttf);
 }
-/* POSICIONAMENTOS */
-
-.center{
-    text-align: center;
-}
-.left{
-    text-align: left;
-}
-.right{
-    text-align: right;
-}
 
 /* MONTSERRAT */
 
@@ -184,6 +173,25 @@
     line-height: 1.4;
 }
 
+/* POSICIONAMENTOS */
+
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+
+/* PESOS */
+.bold{
+    font-weight:700;
+}
+.normal{
+    font-weight: 400;
+}
 @media screen and (min-width:768px) and (max-width: 1580px) {
     .font{
         
