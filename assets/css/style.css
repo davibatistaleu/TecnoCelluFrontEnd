@@ -7,47 +7,57 @@
 @import url(partes/header.css);
 @import url(partes/orcamento.css);
 @import url(partes/brandindEUberFlash.css);
+@import url(partes/nossaEquipe.css);
 
-#equipe {
-  padding: 80px;
-  background-color: var(--cor-3);
+#footer{
+  background-color: var(--cor-2);
+  padding: 80px 0 0 0;
 }
-#equipe-flexbox {
-  display: flex;
-  justify-content: space-around;
-  margin: 80px auto;
+
+#grid-footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  gap: 40px;
+  margin: 20px auto;
+  padding: 30px 0 50px 0;
 }
-#equipe-flexbox > div {
-  background-color: var(--cor-3);
-  box-shadow: 7px 7px 20px #141414, -7px -7px 20px #2a2a2a;
-  border-radius: 20px;
-  flex-basis: 250px;
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-  flex-direction: column;
+#horario-de-funcionamento-grid{
+  width: 100%;
+}
+#cronograma-grid{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
   align-items: center;
 }
-#equipe-flexbox div > div::after{
-    content: '';
-    display: block;
-    height: 5px;
-    border-radius: 5px;
-    width: 20px;
-    margin: 10px auto;
+#cronograma-grid div{
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 2px solid var(--cor-7);
+  justify-content: space-between;
+  align-items: center;
 }
-#equipe-flexbox div > div > img{
-    max-height: 140px;
+#links p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
 }
-#equipe-flexbox div > div.vermelho::after{
-    background-color: red;
+
+#grid-footer + p{
+  margin: 50px 0;
 }
-#equipe-flexbox div > div.amarelo::after{
-    background-color: yellow;
+#footer p{
+  color: var(--cor-10);
 }
-#equipe-flexbox div > div.verde::after{
-    background-color: green;
+#footer > p{
+  background-color: var(--cor-0);
+  padding: 20px 0;
 }
-#equipe-flexbox div > div.roxo::after{
-    background-color: purple;
-}
+
+
+
