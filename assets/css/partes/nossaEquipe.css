@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-around;
   margin: 80px auto;
+  overflow: auto;
 }
 #equipe-flexbox > div {
   background-color: var(--cor-3);
@@ -40,4 +41,20 @@
 }
 #equipe-flexbox div > div.roxo::after{
     background-color: purple;
+}
+
+
+@media (min-width:768px) and (max-width: 1580px){
+  #equipe-flexbox {
+    display: flex;
+    overflow-x: auto;    
+    justify-content: space-around;
+    gap: 20px;
+    padding:70px 20px;
+  }
+  #equipe-flexbox > div{
+    height: min-content;
+    flex-basis: 240px;
+    flex-shrink: 0;
+  }
 }

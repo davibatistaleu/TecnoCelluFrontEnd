@@ -1,32 +1,15 @@
-body{
-    background-color: grey;
-}
-@font-face{
-    font-family: 'montserrat';
-    src: url(../../fontes/Montserrat/static/Montserrat-Regular.ttf);
-}
-@font-face {
-    font-family: 'montserrat-bold';
-    src: url(../../fontes/Montserrat/static/Montserrat-Bold.ttf);
-}
+/* responsivo */
 
-@font-face{
-    font-family: 'rubik';
-    src: url(../../fontes/Rubik/static/Rubik-Regular.ttf);
-}
-@font-face {
-    font-family: 'rubik-bold';
-    src: url(../../fontes/Rubik/static/Rubik-Bold.ttf);
-}
+@media screen and (max-width: 1023px) and (min-width:768px) {
 
-/* MONTSERRAT */
+    /* MONTSERRAT */
 
 .font-1-xxl {
     color: var(--cor-15);
     font-family: 'montserrat-bold';
     font-style: normal;
     font-weight: 700;
-    font-size: 4em;
+    font-size: 2em;
     line-height: 1.4;
 }
 
@@ -109,7 +92,7 @@ body{
     font-family: 'rubik-bold';
     font-style: normal;
     font-weight: 700;
-    font-size: 4em;
+    font-size: 2em;
     line-height: 1.4;
 }
 
@@ -176,29 +159,5 @@ body{
     line-height: 1.4;
 }
 
-/* POSICIONAMENTOS */
 
-.center{
-    text-align: center;
 }
-.left{
-    text-align: left;
-}
-.right{
-    text-align: right;
-}
-
-/* PESOS */
-.bold{
-    font-weight:700;
-}
-.normal{
-    font-weight: 400;
-}
-@media screen and (min-width:768px) and (max-width: 1580px) {
-    .font{
-        font-size: 0.875;
-    }
-    
-}
-

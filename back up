@@ -14,6 +14,7 @@
         src="assets/imagens/triangulo-direito.svg"
         alt=""
       />
+      <input type="checkbox" name="" id="gatilho-menu">
       <nav id="header-nav">
         <a id="logo" class="font font-1-xl" href="">Tecno<span>.Cellu</span></a>
         <ul id="menu-principal" class="font font-1-m">
@@ -26,6 +27,10 @@
           <li><a href="">Login</a></li>
           <li><a class="btn-genrico-cor-1" href="">Criar conta</a></li>
         </ul>
+        
+        <label for="gatilho-menu">
+          <span></span>
+        </label>
       </nav>
       
       <div id="grid-header" class="container-1200">
@@ -34,7 +39,6 @@
         </div>
         <div id="textos" class="font-1-s">
           <h1 class="font-1-lm">Assistência Técnica especializada</h1>
-          <div>
           <p>
             <img src="assets/imagens/icones/microscopio.svg" alt="" /> Orçamento
             gratuito
@@ -46,7 +50,6 @@
           <p>
             <img src="assets/imagens/icones/cartao.svg" alt="" /> Preço flexível
           </p>
-        </div>
         </div>
       </div>
 
