@@ -57,6 +57,22 @@
   padding: 15px 30px;
 }
 
+.btn-genrico-cor-enfase {
+  font-family: 'rubik-bold';
+  font-size: 1.125em;
+  color: var(--cor-enfase-dark);
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(135deg, var(--cor-enfase)50%, var(--cor-enfase-escurecida) 50% 70%,var(--cor-enfase) 70% 100%);
+  border-radius: 5px;
+  padding: 15px 30px;
+  transition: 1s;
+}
+.btn-genrico-cor-enfase:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 24px -12px var(--cor-enfase), 0 22px 15px -24px var(--cor-15);
+}
+
 
 /* LINKS */
 .link{

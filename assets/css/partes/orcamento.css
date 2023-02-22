@@ -6,9 +6,9 @@
 #orcamento #grid-orcamento {
   margin: 80px auto;
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   grid-template-rows: 1fr;
-  justify-content: space-evenly;
+  justify-ite: center;
 }
 #sintomas {
   background-color: var(--cor-3);
@@ -70,6 +70,10 @@
   align-items: center;
   background-color: var(--cor-2);
 }
+#grid-sintomas a li:hover {
+  box-shadow: 0 0 0px 2px var(--cor-15);
+  background-color: var(--cor-enfase);
+}
 #grid-sintomas a li img {
   max-width: 72px;
   max-height: 70px;
@@ -87,15 +91,6 @@
   grid-template-rows: max-content min-content;
   justify-items: center;
 }
-#andamento .canvas-bg p::after{
-    content: '';
-    display: block;
-    height: 3px;
-    width: 250px;
-    border-radius: 3px;
-    margin: 0 auto;
-    background-color: var(--cor-primaria);
-  }
 #container-img-andamento {
   padding: 75px 0;
 }
@@ -113,4 +108,19 @@
   width: 100%;
   justify-content: center;
   gap: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  #grid-orcamento {
+    margin: 80px auto;
+    gap: 150px;
+    justify-items: center;
+  }
+  #andamento {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--cor-3);
+    max-width: 500px;
+    width: max-content;
+  }
 }

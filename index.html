@@ -9,6 +9,7 @@
   </head>
   <body>
     <header id="header">
+      <input type="checkbox" id="menu-hamburger-gatilho" name="" id="" />
       <img
         id="triangulo-direito"
         src="assets/imagens/triangulo-direito.svg"
@@ -25,6 +26,11 @@
         <ul id="menu-login" class="font font-1-m">
           <li><a href="">Login</a></li>
           <li><a class="btn-genrico-cor-1" href="">Criar conta</a></li>
+          <li>
+            <label id="hamburger-btn" for="menu-hamburger-gatilho"
+              ><span></span
+            ></label>
+          </li>
         </ul>
       </nav>
       <div id="grid-header" class="container-1200">
@@ -33,17 +39,20 @@
         </div>
         <div id="textos" class="font-1-s">
           <h1 class="font-1-lm">Assistência Técnica especializada</h1>
-          <p>
-            <img src="assets/imagens/icones/microscopio.svg" alt="" /> Orçamento
-            gratuito
-          </p>
-          <p>
-            <img src="assets/imagens/icones/relogio.svg" alt="" /> Conserto na
-            hora
-          </p>
-          <p>
-            <img src="assets/imagens/icones/cartao.svg" alt="" /> Preço flexível
-          </p>
+          <div>
+            <p>
+              <img src="assets/imagens/icones/microscopio.svg" alt="" />
+              Orçamento gratuito
+            </p>
+            <p>
+              <img src="assets/imagens/icones/relogio.svg" alt="" /> Conserto na
+              hora
+            </p>
+            <p>
+              <img src="assets/imagens/icones/cartao.svg" alt="" /> Preço
+              flexível
+            </p>
+          </div>
         </div>
       </div>
 
@@ -175,9 +184,9 @@
               <div id="container-img-andamento">
                 <img src="assets/imagens/acompanhamento.svg" alt="" srcset="" />
               </div>
-              <p class="font-1-m center">
+              <a class="btn-genrico-cor-enfase">
                 Gostaria de acompanhar o andamento do meu aparelho
-              </p>
+              </a>
             </div>
             <span></span>
           </div>
@@ -192,7 +201,7 @@
     <article id="garantia" class="branding">
       <div class="container-1200">
         <div class="grid">
-          <div class="direito">
+          <div class="direito branding-img">
             <img src="assets/imagens/img-garantia.svg" alt="" srcset="" />
           </div>
           <div class="font-1-m esquerdo textos">
@@ -209,7 +218,7 @@
     <article id="experiencia" class="branding">
       <div class="container-1200">
         <div class="grid">
-          <div class="esquerdo">
+          <div class="esquerdo branding-img">
             <img src="assets/imagens/img-experiencia.svg" alt="" srcset="" />
           </div>
           <div class="font-1-m direito textos">
@@ -226,7 +235,7 @@
     <article id="confianca" class="branding">
       <div class="container-1200">
         <div class="grid">
-          <div class="direito">
+          <div class="direito  branding-img">
             <img src="assets/imagens/img-confianca.png" alt="" srcset="" />
           </div>
           <div class="font-1-m esquerdo textos">
@@ -337,12 +346,28 @@
             <h5 class="font-2-m bold">Contato</h5>
             <p>(11) 97714 - 0500</p>
             <h5 class="font-2-m bold">Acesse as nossas redes sociais</h5>
-            <p><img src="assets/imagens/icones/youtube.svg" alt=""> youtube.com/tecnocellu</p>
-            <p><img src="assets/imagens/icones/facebook.svg" alt="">facebook.com/tecnocellu</p>
-            <p><img src="assets/imagens/icones/instagram.svg" alt="">instagram.com/alemao.tecnocellu</p>
+            <p>
+              <img src="assets/imagens/icones/youtube.svg" alt="" />
+              youtube.com/tecnocellu
+            </p>
+            <p>
+              <img
+                src="assets/imagens/icones/facebook.svg"
+                alt=""
+              />facebook.com/tecnocellu
+            </p>
+            <p>
+              <img
+                src="assets/imagens/icones/instagram.svg"
+                alt=""
+              />@alemao.tecnocellu
+            </p>
           </div>
         </div>
-        <p class="font-1-s center"> <span class="bold"> Tecno Cellu 2013 - 2023 </span>|  Todos os direitos reservados</p>
+        <p class="font-1-s center">
+          <span class="bold"> Tecno Cellu 2013 - 2023 </span>| Todos os direitos
+          reservados
+        </p>
       </div>
       <p class="font-1-s center">
         Rua Antônio de Oliveira Salazar, 560 - Taboão da Serra - São Paulo - SP

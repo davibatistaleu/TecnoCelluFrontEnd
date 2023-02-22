@@ -26,6 +26,8 @@
 
 /* Cor Secudaria / Ênfase */
 :root{
+  --cor-enfase-dark: #412a00;
   --cor-enfase-escurecida: #da8d00;
   --cor-enfase: #ffa100;
+  --cor-enfase-light: #ffbb00;
 }
