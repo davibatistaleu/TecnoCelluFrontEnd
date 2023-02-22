@@ -263,7 +263,7 @@
   }
   #header-nav {
     display: flex;
-    justify-content:;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: min-content;

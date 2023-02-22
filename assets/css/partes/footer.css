@@ -69,3 +69,28 @@
     margin-bottom: 50px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #footer .container-1200{
+    padding: 0 20px;
+  }
+  #grid-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 40px;
+    margin: 20px auto 0 auto;
+    padding: 30px 0 00px 0;
+  }
+  #horario-de-funcionamento-grid{
+    min-width: 430px;
+    width: max-content;
+  }
+  #links{
+    border-top: 2px solid var(--cor-5);
+    padding: 10px 100px;
+  }
+  #grid-footer + p{
+    margin-bottom: 50px;
+  }
+}

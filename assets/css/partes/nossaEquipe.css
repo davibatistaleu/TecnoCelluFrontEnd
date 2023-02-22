@@ -18,35 +18,35 @@
   flex-direction: column;
   align-items: center;
 }
-#equipe-flexbox div > div::after{
-    content: '';
-    display: block;
-    height: 5px;
-    border-radius: 5px;
-    width: 20px;
-    margin: 10px auto;
+#equipe-flexbox div > div::after {
+  content: "";
+  display: block;
+  height: 5px;
+  border-radius: 5px;
+  width: 20px;
+  margin: 10px auto;
 }
-#equipe-flexbox div > div > img{
-    max-height: 140px;
+#equipe-flexbox div > div > img {
+  max-height: 140px;
 }
-#equipe-flexbox div > div.vermelho::after{
-    background-color: red;
+#equipe-flexbox div > div.vermelho::after {
+  background-color: red;
 }
-#equipe-flexbox div > div.amarelo::after{
-    background-color: yellow;
+#equipe-flexbox div > div.amarelo::after {
+  background-color: yellow;
 }
-#equipe-flexbox div > div.verde::after{
-    background-color: green;
+#equipe-flexbox div > div.verde::after {
+  background-color: green;
 }
-#equipe-flexbox div > div.roxo::after{
-    background-color: purple;
+#equipe-flexbox div > div.roxo::after {
+  background-color: purple;
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
-  #equipe{
+  #equipe {
     padding: 80px 20px;
   }
-  #equipe-flexbox{
+  #equipe-flexbox {
     display: grid;
     gap: 30px;
     padding: 30px 0;
@@ -54,10 +54,29 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, max-content));
     width: 100%;
   }
-  #equipe-flexbox div{
+  #equipe-flexbox div {
     flex-shrink: 0;
     flex-basis: max-content;
     flex-grow: 0;
+  }
+}
 
+@media (min-width: 320px) and (max-width: 767px) {
+  #equipe {
+    padding: 60px 10px;
+  }
+  #equipe-flexbox {
+    display: grid;
+    gap: 30px;
+    padding: 20px 0;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, max-content));
+    width: 100%;
+    margin: 30px auto;
+  }
+  #equipe-flexbox div {
+    flex-shrink: 0;
+    flex-basis: max-content;
+    flex-grow: 0;
   }
 }
