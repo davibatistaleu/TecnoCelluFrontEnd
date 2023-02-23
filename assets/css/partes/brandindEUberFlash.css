@@ -56,7 +56,21 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .grid .textos{
+  .grid .textos {
+    grid-area: textos;
+  }
+  .grid {
+    grid-template-areas: "textos";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .grid .branding-img {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .grid .textos {
     grid-area: textos;
   }
   .grid {

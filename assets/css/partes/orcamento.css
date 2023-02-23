@@ -124,3 +124,16 @@
     width: max-content;
   }
 }
+@media (min-width: 320px) and (max-width: 767px){
+  #flex-btns {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  #flex-btns a{
+    width: 100%;
+
+  }
+}

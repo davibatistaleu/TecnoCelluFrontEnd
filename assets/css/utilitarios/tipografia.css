@@ -192,9 +192,84 @@
 .normal{
     font-weight: 400;
 }
-@media screen and (min-width:768px) and (max-width: 1580px) {
-    .font{
-        
+@media (min-width: 320px) and (max-width: 767px) {
+    .font-1-xxl {
+        color: var(--cor-15);
+        font-family: 'montserrat-bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5em;
+        line-height: 1.4;
+    }
+    
+    .font-1-xl {
+        color: var(--cor-15);
+        font-family: 'montserrat-bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.4;
+    }
+    .font-1-lm {
+        color: var(--cor-15);
+        font-family: 'montserrat-bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.3;
+    }
+    .font-1-l {
+        color: var(--cor-15);
+        font-family: 'montserrat-bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.4;
+    }
+    
+    .font-1-xm {
+        color: var(--cor-15);
+        font-family: 'montserrat-bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    .font-1-m {
+        color: var(--cor-15);
+        font-family: 'montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5em;
+        line-height: 1.4;
+    }
+    
+    .font-1-s {
+        color: var(--cor-15);
+        font-family: 'montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875em;
+        line-height: 1.4;
+    }
+    
+    .font-1-xs {
+        color: var(--cor-15);
+        font-family: 'montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875em;
+        line-height: 1.4;
+    }
+    
+    .font-1-xxs {
+        color: var(--cor-15);
+        font-family: 'montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875em;
+        line-height: 1.4;
     }
     
 }

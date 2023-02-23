@@ -263,7 +263,7 @@
   }
   #header-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: min-content;
@@ -293,6 +293,13 @@
     display: none;
   }
   #textos h1{
-    font-size: 2em;
+    font-size: 2.5em;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: red;
+  }
+  #hamburger-btn{
+    background-color: green;
   }
 }
