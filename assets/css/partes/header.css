@@ -259,16 +259,26 @@
 }
 @media (min-width: 320px) and (max-width: 767px) {
   body{
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-10);
+  }
+  #header{
+    width: 100%;
   }
   #header-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: min-content;
     padding: 10px;
     background-color: var(--cor-2);
+  }
+  #header #triangulo-direito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 380px;
   }
   #header-nav #logo{
     font-size: 2em;
@@ -279,7 +289,7 @@
   #header-nav #menu-principal{
     display: flex;
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     flex-direction: column;
     top: -100%;
     position: fixed;
@@ -289,10 +299,38 @@
     transition: ease 1s;
     transition-delay: 1;
   }
+  #grid-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+  }
   #img-capa{
     display: none;
   }
   #textos h1{
     font-size: 2em;
+    text-align: center;
+  }
+
+  #header #painel {
+    display: block;
+    margin-top: 50px;
+    padding: 10px 5px;
+    background-color: var(--cor-3);
+  }
+  #header #painel ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 10px;
+  }
+  #header #painel ul li {
+    text-align: left;
+    border-bottom: 2px solid var(--cor-6);
+    padding: 6px 0px;
+  }
+  #header #painel ul li img {
+    margin: 0 5px;
   }
 }

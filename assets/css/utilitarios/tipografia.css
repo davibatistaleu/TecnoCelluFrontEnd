@@ -198,3 +198,14 @@
     }
     
 }
+@media (min-width: 320px) and (max-width: 767px) {
+    .font-1-xxl{
+        font-size:2.5em
+    }
+    .font-1-xl{
+        font-size:2em
+    }
+    .font-1-m{
+        font-size:1.35em
+    }
+}
