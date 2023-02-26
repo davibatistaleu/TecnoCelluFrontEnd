@@ -44,8 +44,12 @@
 #header-nav #menu-principal li a {
   margin: 0 10px;
 }
+.hidden-login{
+  position: absolute;
+  visibility: hidden;
+}
 #menu-login a {
-  margin: 0 15px;
+  margin-left:15px;
   font-weight: 700;
 }
 #grid-header {
@@ -73,6 +77,10 @@
   border-radius: 5px;
   background-color: var(--cor-primaria);
   display: block;
+}
+#grid-header #textos div {
+  width: max-content;
+  margin: 30px auto 30px auto;
 }
 #grid-header #textos p {
   display: flex;
@@ -113,7 +121,47 @@
   border-bottom: none;
 }
 
+@media (min-width: 1025px) and (max-width: 1250px) {
+  #header-nav{
+    justify-content: space-between;    
+    padding: 15px 5px;
+  }
+  #header-nav #logo {
+    font-size: 2em
+  }
+  #header-nav #menu-principal li {
+    font-size: 0.875em
+  }
+  #header-nav #menu-login{
+    font-size: 1em
+  }
+
+  #grid-header #textos div {
+    margin: 30px 0 30px 0;
+  }
+  #grid-header #textos h1 {
+    min-width: 15ch;
+    font-size: 2em;
+    max-width: min-content;
+    display: block;
+  }
+}
+
 @media (min-width: 767px) and (max-width: 1024px) {
+  #grid-header #textos div {
+    margin: 30px auto 30px auto;
+  }
+  #grid-header #textos h1 {
+    min-width: 15ch;
+    font-size: 2em;
+    max-width: min-content;
+    display: block;
+  }
+  #grid-header #textos h1::before {
+
+    display: none;
+  }
+  
   #header #menu-hamburger-gatilho {
     display: none;
   }
@@ -215,6 +263,10 @@
     transform: translate(-50%, -50%);
     z-index: 99999;
   }
+  #header #menu-hamburger-gatilho:checked ~ #header-nav #menu-principal .hidden-login{
+    position: relative;
+    visibility: visible;
+  }
   #header-nav {
     height: 100px;
     background-color: var(--cor-2);
@@ -253,22 +305,32 @@
     display: none;
   }
 }
-#grid-header #textos div {
-  width: max-content;
-  margin: 30px auto 30px auto;
-}
 @media (min-width: 320px) and (max-width: 767px) {
   body{
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-10);
+  }
+  #header{
+    width: 100%;
   }
   #header-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: min-content;
     padding: 10px;
     background-color: var(--cor-2);
+  }
+  #header #menu-hamburger-gatilho:checked ~ #header-nav #menu-principal .hidden-login{
+    position: relative;
+    visibility: visible;
+  }
+  #header #triangulo-direito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 380px;
   }
   #header-nav #logo{
     font-size: 2em;
@@ -279,7 +341,7 @@
   #header-nav #menu-principal{
     display: flex;
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     flex-direction: column;
     top: -100%;
     position: fixed;
@@ -289,17 +351,50 @@
     transition: ease 1s;
     transition-delay: 1;
   }
+  #grid-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+  }
   #img-capa{
     display: none;
   }
   #textos h1{
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 3.5em;
     display: inline-block;
-    margin: 0 auto;
-    background-color: red;
   }
-  #hamburger-btn{
-    background-color: green;
+  #textos p{
+    font-size: 1.5em;
+  }
+  #header #painel {
+    display: block;
+    margin-top: 50px;
+    padding: 20px 50px;
+    background-color: var(--cor-3);
+  }
+  #header #painel ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  #header #painel ul li{
+    text-align: left;
+    border: none;
+    padding: 12px 0px;
+  }
+  #header #painel ul li img {
+    margin: 0 10px;
+  }
+  #header #painel ul li:nth-child(odd) {
+    text-align: right;
+    border-right: 2px solid var(--cor-6);
+  }
+  #header #painel ul li:nth-child(7) {
+    text-align: right;
+    border-bottom: none;
+  }
+  #header #painel ul li:last-child {
+    border-bottom: none;
   }
 }
