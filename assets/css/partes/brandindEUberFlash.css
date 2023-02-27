@@ -94,8 +94,6 @@
   .grid .branding-img {
     display: none;
   }
-}
-@media (min-width: 320px) and (max-width: 767px) {
   .branding{
     padding:50px 10px;
   }
@@ -130,4 +128,11 @@
   .direito {
     grid-area: direito;
   }  
+  #uber-flash {
+    padding: 80px 20px;
+    font-size: 0.875em;
+    background-color: var(--cor-2);
+    display: grid;
+    justify-items: center;
+  }
 }

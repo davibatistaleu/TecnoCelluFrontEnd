@@ -101,19 +101,21 @@
 }
 #andamento span {
   display: block;
-  width: 74px;
-  height: 74px;
+  width: 60px;
+  height: 60px;
   background-color: var(--cor-1);
   border-radius: 74px;
   margin: 15px auto 0 auto;
 }
-
 #orcamento #flex-btns {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 90ch;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -129,9 +131,13 @@
     max-width: 500px;
     width: max-content;
   }
+  #sintomas span{
+    width: 60px;
+    height: 60px;
+  }
   #andamento span{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
   #andamento .btn-genrico-cor-enfase{
     padding: 5px 10px;
@@ -142,7 +148,7 @@
   #grid-orcamento {
     margin: 80px auto;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 150px;
+    gap: 100px;
     justify-items: center;
   }
   #sintomas {
@@ -153,7 +159,7 @@
   }
   #andamento {
     border-radius: 20px;
-    padding: 10px;
+    padding: 10px !important;
     background-color: var(--cor-3);
     min-width: 250px;
     max-width: 320px;
@@ -190,19 +196,6 @@
     width: 50px;
     height: 50px;
   }
-  @media (min-width: 320px) and (max-width: 450px) {
-    #andamento {
-      border-radius: 20px;
-      padding: 20px;
-      background-color: var(--cor-3);
-      min-width: 320px;
-      max-width: 500px;
-      width: 320px;
-    }
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
   #flex-btns {
     display: flex;
     width: 100%;
@@ -216,5 +209,19 @@
   #sintomas span {
     height: 60px;
     width: 60px;
+  }
+  #andamento {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--cor-3);
+    min-width: 320px;
+    max-width: 500px;
+    width: 320px;
+  }
+  #flex-btns{
+    width: 100% !important;
+    padding: 30px;
+    flex-wrap:wrap;
+    flex:1 !important;
   }
 }
