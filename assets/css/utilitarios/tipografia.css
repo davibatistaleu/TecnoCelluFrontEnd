@@ -6,6 +6,10 @@
     font-family: 'montserrat-bold';
     src: url(../../fontes/Montserrat/static/Montserrat-Bold.ttf);
 }
+@font-face{
+    font-family: 'universal montserrat';
+    src: url(../../fontes/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
 
 @font-face{
     font-family: 'rubik';

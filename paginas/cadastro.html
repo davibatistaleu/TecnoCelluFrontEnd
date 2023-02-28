@@ -13,7 +13,7 @@
         <nav>
           <ul>
             <li>
-              <a class="page-link" href="index.html"
+              <a class="page-link" href="../index.html"
                 ><img
                   src="../assets/imagens/icones/setaesquerda.svg"
                   alt=""
@@ -39,14 +39,30 @@
           <img src="../assets/imagens/img-cadastro.png" alt="" />
         </div>
         <div class="form-canvas">
-          <h1 class="font-2-xl">Cadastre-se</h1>
+          <h1 class="font-2-l">Cadastre-se</h1>
           <form action="">
-            <input type="text">
-            <input type="text">
-            <input type="email" name="" id="">
-            <input type="password">
-            <input type="password">
+            <input type="text" id="nome" placeholder="Nome:"/>
+            <input type="text" id="sobrenome" placeholder="Sobrenome:"/>
+            <input type="email" name="" id="email" placeholder="Email:"/>
+            <input type="password" id="senha" placeholder="Senha:"/>
+            <input type="password" id="confirmacao" placeholder="Confirmação de senha:"/>
+            <label for="notificacoes">
+              <input type="checkbox" checked name="" id="notificacoes" />
+              <p>
+                Eu aceito receber notificações promocionais e atualizações via
+                e-mail.
+              </p>
+            </label>
+            <label for="termos">
+              <input type="checkbox" name="" id="termos" />
+              <p>
+                Ao clicar em cadastrar, você concorda com os termos de <span>Politica
+                e Privacidade</span>.
+              </p>
+            </label>
+            <input type="button" value="Cadastrar" id="btn-cadastro">
           </form>
+          <a href="">Já tem um cadastro?</a>
         </div>
       </div>
     </main>

@@ -11,7 +11,7 @@ main{
   display: grid;
   justify-items: center;
   align-content: center;
-  background-color: var(--cor-3);
+  background-color: var(--cor-1);
 }
 header{
   width: 100%;
@@ -35,9 +35,9 @@ header nav ul{
 }
 #cadastro-canvas{
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.2fr;
   width: 700px;
-  height: 450px;
+  height: 500px;
   background-color: var(--cor-3);
 }
 .img-canvas{
@@ -56,11 +56,130 @@ header nav ul{
 }
 .form-canvas h1{
   color: var(--cor-primaria);
+  font-family: 'universal rubik';
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 form{
-  background-color: green;
-  width: min-content;
+  padding:0 0px;
+  max-width: 300px;
+  width: max-content;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px 12px;
+  grid-template-areas:
+   'nome sobrenome'
+   'email email'
+   'senha senha'
+   'confirmacao confirmacao'
+   'notificacoes notificacoes'
+   'termos termos'
+   'btn btn'
+  ;
 }
 input{
-  width: min-content;
+  max-width: 350px;
+  width: 100%;
+  background-color: var(--cor-3);
+  border: none;
+  border-radius: 2px;
+  padding: 12px 12px;
+  position: relative;
+  
+  outline:none;
+}
+input::placeholder{
+  color: var(--cor-15);
+  font-size: 1.25em;
+  font-family: "universal rubik";
+  font-weight: 500;
+  transition: .3s ease;
+  position: absolute;
+}
+input:focus::placeholder{
+  color: var(--cor-10);
+  font-size: .675em;
+  top: 2px;
+  left: 2px;
+}
+#nome{
+  grid-area: nome;
+}
+#sobrenome{
+  grid-area: sobrenome;
+}
+#email{
+  grid-area: email;
+}
+#senha{
+  grid-area: senha;
+}
+#confirmacao{
+  grid-area: confirmacao;
+}
+label[for="notificacoes"]{
+  grid-area: notificacoes;
+}
+label[for="termos"]{
+  grid-area: termos;
+}
+label{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  color: var(--cor-15);
+  font-family: 'universal rubik';
+  font-weight: 400;
+  font-size: 0.7em;
+}
+span{
+  color: red;
+}
+
+label input[type="checkbox"]{
+  height: 12px;
+  width: 12px;
+}
+#btn-cadastro{
+  grid-area: btn;
+  background-color: var(--cor-primaria);
+  color: var(--cor-15);
+  font-family: 'universal rubik';
+  font-size: 1.5em;
+  font-weight:500;
+  padding:6px ;
+}
+#btn-cadastro:hover{  
+  background-color: var(--cor-primaria-escurecida);
+}
+.form-canvas a{
+  color: var(--cor-15);
+  font-family: 'universal montserrat';
+  font-size: 0.775em;
+  margin: 0 auto;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 12px;
+}
+
+@media (min-width:320px) and (max-width:550px){
+  #cadastro-canvas{
+    width: 95vw;
+    grid-template-columns: 1fr;
+  }
+  .img-canvas{
+    display: none;
+  }
+  header{
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: none;
+    padding: 10px;
+  }
+  #cadastro-canvas{
+    margin: 10px 0;
+  }
 }
