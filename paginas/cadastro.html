@@ -41,11 +41,36 @@
         <div class="form-canvas">
           <h1 class="font-2-l">Cadastre-se</h1>
           <form action="">
-            <input type="text" id="nome" placeholder="Nome:"/>
-            <input type="text" id="sobrenome" placeholder="Sobrenome:"/>
-            <input type="email" name="" id="email" placeholder="Email:"/>
-            <input type="password" id="senha" placeholder="Senha:"/>
-            <input type="password" id="confirmacao" placeholder="Confirmação de senha:"/>
+            <div class="canvas-input" id="container-nome">
+              <input placeholder=" " type="text" id="nome" />
+              <div class="container-label">
+                <label for="nome">Nome:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-sobre">
+              <input placeholder=" " type="text" id="sobrenome" />
+              <div class="container-label">
+                <label for="nome">Sobrenome:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-email">
+              <input placeholder=" " type="email" name="" id="email" />
+              <div class="container-label">
+                <label for="nome">Email:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-senha">
+              <input placeholder=" " type="password" id="senha" />
+              <div class="container-label">
+                <label for="nome">Senha:</label>
+              </div>
+            </div>
+            <div class="canvas-input" id="container-confirmacao">
+              <input placeholder=" " type="password" id="confirmacao" />
+              <div class="container-label">
+                <label for="nome">Corfirme sua senha:</label>
+              </div>
+            </div>
             <label for="notificacoes">
               <input type="checkbox" checked name="" id="notificacoes" />
               <p>
@@ -56,11 +81,11 @@
             <label for="termos">
               <input type="checkbox" name="" id="termos" />
               <p>
-                Ao clicar em cadastrar, você concorda com os termos de <span>Politica
-                e Privacidade</span>.
+                Ao clicar em cadastrar, você concorda com os termos de
+                <span>Politica e Privacidade</span>.
               </p>
             </label>
-            <input type="button" value="Cadastrar" id="btn-cadastro">
+            <input type="button" value="Cadastrar" id="btn-cadastro" />
           </form>
           <a href="">Já tem um cadastro?</a>
         </div>

@@ -2,161 +2,221 @@
 @import url(../utilitarios/cores.css);
 @import url(../utilitarios/tipografia.css);
 @import url(../utilitarios/componentes.css);
-body{
+body {
   overflow: hidden;
 }
-main{
+main {
   width: 100%;
   height: 100vh;
   display: grid;
   justify-items: center;
   align-content: center;
-  background-color: var(--cor-1);
+  background-color: var(--cor-2);
 }
-header{
+header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex:1;
+  flex: 1;
   flex-wrap: nowrap;
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
-header nav{
+header nav {
   width: 100%;
 }
-header nav ul{
+header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-#cadastro-canvas{
+#cadastro-canvas {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   width: 700px;
   height: 500px;
-  background-color: var(--cor-3);
+  border-radius: 5px;
+  overflow: hidden;
 }
-.img-canvas{
+.img-canvas {
   width: 100%;
   height: 100%;
 }
-.img-canvas img{
+.img-canvas img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.form-canvas{
+.form-canvas {
   display: grid;
-  align-content:center ;
-  background-color: var(--cor-2);
+  align-content: center;
+  background-color: var(--cor-3);
 }
-.form-canvas h1{
+.form-canvas h1 {
   color: var(--cor-primaria);
-  font-family: 'universal rubik';
+  font-family: "universal rubik";
   font-weight: 600;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-form{
-  padding:0 0px;
+.canvas-input{
+  border-radius: 2px;
+  background-color: var(--cor-4);
+  position: relative;
+}
+.canvas-input .container-label {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: .5s;
+}
+.container-label label {
+  color: var(--cor-15);
+  font-size: 0.875em;
+  font-family: "universal rubik";
+  font-weight: 400;
+  line-height: 0;
+}
+.canvas-input input{
+  z-index: 2;
+  background-color: transparent;
+}
+.canvas-input input:placeholder-shown ~ .container-label{
+  color: var(--cor-15);
+  font-size: 0.875em;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+.canvas-input input:focus ~ .container-label{
+  color: var(--cor-10);
+  font-size: 0.675em;
+  top: 0px;
+  transform: translateY(0);
+  left: 5px;
+  z-index: 3;
+}
+.canvas-input input:invalid ~ .container-label{
+  color: var(--cor-10);
+  font-size: 0.675em;
+  top: 0px;
+  transform: translateY(0);
+  left: 12px;
+}
+.canvas-input input:not(:placeholder-shown) ~ .container-label{
+  color: var(--cor-10);
+  font-size: 0.675em;
+  top: 0px;
+  transform: translateY(0);
+  left: 5px;
+  z-index: 3;
+}
+form {
+  padding: 0 0px;
   max-width: 300px;
   width: max-content;
   margin: 0 auto;
   display: grid;
   gap: 12px 12px;
   grid-template-areas:
-   'nome sobrenome'
-   'email email'
-   'senha senha'
-   'confirmacao confirmacao'
-   'notificacoes notificacoes'
-   'termos termos'
-   'btn btn'
-  ;
+    "nome sobrenome"
+    "email email"
+    "senha senha"
+    "confirmacao confirmacao"
+    "notificacoes notificacoes"
+    "termos termos"
+    "btn btn";
 }
-input{
+input {
   max-width: 350px;
   width: 100%;
-  background-color: var(--cor-3);
+  background-color: var(--cor-4);
   border: none;
   border-radius: 2px;
   padding: 12px 12px;
   position: relative;
-  
-  outline:none;
-}
-input::placeholder{
   color: var(--cor-15);
-  font-size: 1.25em;
-  font-family: "universal rubik";
   font-weight: 500;
-  transition: .3s ease;
-  position: absolute;
+  font-family: "universal rubik";
+  outline: none;  
+  border:1px solid transparent;
 }
-input:focus::placeholder{
-  color: var(--cor-10);
-  font-size: .675em;
-  top: 2px;
-  left: 2px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  border: 1px solid transparent;
+  -webkit-text-fill-color: var(--cor-15);
+  -webkit-box-shadow: 0 0 0px 1000px var(--cor-4) inset;
+  transition: background-color 6000s ease-in-out 6000s;
 }
-#nome{
+input:focus{
+  border:1px solid var(--cor-15);
+}
+input:invalid{
+  border-color: red;
+}
+
+#container-nome {
   grid-area: nome;
 }
-#sobrenome{
+#container-sobrenome {
   grid-area: sobrenome;
 }
-#email{
+#container-email {
   grid-area: email;
 }
-#senha{
+#container-senha {
   grid-area: senha;
 }
-#confirmacao{
+#container-confirmacao {
   grid-area: confirmacao;
 }
-label[for="notificacoes"]{
+label[for="notificacoes"] {
   grid-area: notificacoes;
 }
-label[for="termos"]{
+label[for="termos"] {
   grid-area: termos;
 }
-label{
+label[for="termos"], label[for="notificacoes"]{
   width: 100%;
   display: flex;
   gap: 5px;
   color: var(--cor-15);
-  font-family: 'universal rubik';
+  font-family: "universal rubik";
   font-weight: 400;
   font-size: 0.7em;
+  position: relative;
 }
-span{
+span {
   color: red;
 }
-
-label input[type="checkbox"]{
+label input[type="checkbox"] {
   height: 12px;
   width: 12px;
 }
-#btn-cadastro{
+#btn-cadastro {
   grid-area: btn;
   background-color: var(--cor-primaria);
   color: var(--cor-15);
-  font-family: 'universal rubik';
+  font-family: "universal rubik";
   font-size: 1.5em;
-  font-weight:500;
-  padding:6px ;
+  font-weight: 500;
+  padding: 6px;
 }
-#btn-cadastro:hover{  
+#btn-cadastro:hover {
   background-color: var(--cor-primaria-escurecida);
 }
-.form-canvas a{
+.form-canvas a {
   color: var(--cor-15);
-  font-family: 'universal montserrat';
+  font-family: "universal montserrat";
   font-size: 0.775em;
   margin: 0 auto;
   font-weight: 500;
@@ -164,7 +224,7 @@ label input[type="checkbox"]{
   margin-top: 12px;
 }
 
-@media (min-width:320px) and (max-width:550px){
+@media (min-width:250px) and (max-width:550px){
   #cadastro-canvas{
     width: 95vw;
     grid-template-columns: 1fr;
@@ -172,12 +232,19 @@ label input[type="checkbox"]{
   .img-canvas{
     display: none;
   }
+  main{
+    background-image: url(../../imagens/img-cadastro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
   header{
-    position: initial;
-    top: initial;
+    position: fixed;
+    top: 0;
     left: initial;
     transform: none;
     padding: 10px;
+    background-color: var(--cor-3);
   }
   #cadastro-canvas{
     margin: 10px 0;

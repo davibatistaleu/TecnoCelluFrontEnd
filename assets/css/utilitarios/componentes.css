@@ -84,13 +84,13 @@
   text-decoration: underline;
 }
 .page-link{
-  font-family: 'rubik';
-  font-weight: 500;
-  font-size: 1.25em;
-  padding: 5px 10px;
+  font-family: 'universal rubik';
+  font-weight: 400;
+  font-size: 1.125em;
+  padding: 9px 18px;
   border-radius: 100px;
   display: inline-flex;
   gap: 10px;
-  background-color: var(--cor-2);
+  background-color: var(--cor-5);
   color: var(--cor-15);
 }
