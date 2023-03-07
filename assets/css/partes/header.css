@@ -28,12 +28,7 @@
   width: 100%;
   padding: 10px;
 }
-#logo {
-  display: inline-block;
-}
-#logo span {
-  color: var(--cor-primaria);
-}
+
 #header-nav ul {
   display: flex;
   gap: 5px;
