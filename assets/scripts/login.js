@@ -8,23 +8,16 @@ const horas = dataUsuario.getHours();
 const minutos = dataUsuario.getMinutes();
 
 const dia = dataUsuario.getDate();
+const mes = dataUsuario.getMonth()
 const ano = dataUsuario.getFullYear();
 
-function mostrarMes() {
-  let mes = dataUsuario.getMonth() + 1;
-  if ( mes <= 9){
-    mes = '0' + mes;
-  }
-  return mes;
-}
 function mostrarDiaDaSemana() {
   let dia = dataUsuario.getDay();
   const diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 
   return diasDaSemana[dia];
 }
-function mostrarDia() {
-  let mes = dataUsuario.getDate();
+function formatarUnidade(mes) {
   if ( mes <= 9){
     mes = '0' + mes;
   }
@@ -53,5 +46,5 @@ function montarFrase() {
 }
 
 montarFrase()
-relogioHora.innerHTML = `${horas}:${minutos}`
-relogioDia.innerHTML = `${mostrarDiaDaSemana()} - ${mostrarDia()}/${mostrarMes()}/${dataUsuario.getFullYear()}`
+relogioHora.innerHTML = `${formatarUnidade(horas)}:${minutos}`
+relogioDia.innerHTML = `${mostrarDiaDaSemana()} - ${formatarUnidade(dia)}/${formatarUnidade(mes)}/${dataUsuario.getFullYear()}`
