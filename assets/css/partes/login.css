@@ -14,7 +14,7 @@ body{
   display: grid;
   align-items: center;
   position: relative;
-  z-index: -1;
+  z-index: 5;
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--cor-3);
   border-radius: 10px;
@@ -29,7 +29,7 @@ body{
   height: 100%;
   display: grid;
   justify-items: center;
-  align-content: center;
+  align-content: center; 
 }
 .container-form h5{
   font-family: 'universal rubik';
@@ -73,7 +73,7 @@ body{
   font-family: 'universal rubik';
   font-weight: 400;
   font-size: 3em;
-  background: center bottom / cover no-repeat url("../../imagens/boa-noite-login.gif");
+  background: center bottom / cover no-repeat;
 }
 .container-dados-horario{
   display: grid;

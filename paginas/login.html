@@ -6,34 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entre na sua conta Tecno Cellu</title>
     <link rel="stylesheet" href="../assets/css/partes/login.css" />
+    <script src="../assets/scripts/login.js" defer></script>
   </head>
   <body>
     <main class="grid-login">
       <div class="container-horario">
         <div class="container-dados-horario">
-          <p id="hora">08:17</p>
-          <p id="dia">sex - 03 / 03 / 23</p>
-          <p id="frase">Bom dia!</p>          
+          <p id="hora"></p>
+          <p id="dia"></p>
+          <p id="frase"></p>          
         </div>
       </div>
       <div class="container-form">
         <h5>Bem-vindo devolta!</h5>
         <h2>entre em sua conta e fique por dentro de todas as novidades</h2>
-        <form action="">
+        <form>
           <div class="canvas-input" id="container-email">
-            <input placeholder=" " type="email" name="" id="email" />
+            <input placeholder=" " type="email" name="" id="email">
             <div class="container-label">
-              <label for="nome">Email:</label>
+              <label for="email">Email:</label>
             </div>
           </div>
           <div class="canvas-input" id="container-senha">
-            <input placeholder=" " type="password" id="senha" />
+            <input placeholder=" " type="password" id="senha">
             <div class="container-label">
-              <label for="nome">Senha:</label>
+              <label for="senha">Senha:</label>
             </div>
           </div>
           <label for="notificacoes">
-            <input type="checkbox" checked name="" id="notificacoes" />
+            <input type="checkbox" checked name="" id="notificacoes">
             <p>
               Eu aceito receber notificações promocionais e atualizações via
               e-mail.
